@@ -60,7 +60,8 @@ initial begin
    mode<=00;
    seed<=0000;
    uio_in<=00001111;
- 
+   ui_in<=0;
+  // uo_out<=50;
    end
 
 endmodule
