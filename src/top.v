@@ -20,10 +20,10 @@ module top (input clk,
                     .nlfsr_out(nlfsr_out),
                     .demux_out(nlfsr_demux_out));
 
-  assign output_data = (mode == 2'b00) ? lfsr_out :8'b00000000;
-                       (mode == 2'b01) ? nlfsr_out :8'b00000000;
-                       (mode == 2'b10) ? lfsr_demux_out :8'b00000000;
-                       (mode == 2'b11) ? nlfsr_demux_out :8'b00000000;
-                                         lfsr_demux_out;
+  assign output_data = (mode == 2'b00) ? {4'h0,lfsr_out} :
+                       (mode == 2'b01) ? {4'h0,nlfsr_out} :
+                       (mode == 2'b10) ? lfsr_demux_out :
+                       (mode == 2'b11) ? nlfsr_demux_out :
+                                         lfsr_demux_out;             
 
 endmodule
