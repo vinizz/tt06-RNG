@@ -17,4 +17,4 @@ Vary input seed to change output bits randomly and observe the same when connect
 
 ## External hardware
 
-LEDs
+Displays and LED can be added
