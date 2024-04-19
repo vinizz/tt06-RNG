@@ -14,7 +14,7 @@ module nlfsr (input clk,
 
   always @(posedge clk or posedge reset)
     if (reset)
-      nlfsr_reg <= seed;
+      nlfsr_reg <= 4'b0000;
     else
       nlfsr_reg <= {nlfsr_reg[2:0], feedback};
 

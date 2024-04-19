@@ -14,7 +14,7 @@ module lfsr (input clk,
 
   always @(posedge clk or posedge reset)
     if (reset)
-      lfsr_reg <= seed;
+      lfsr_reg <= 4'b0000;
     else
       lfsr_reg <= {lfsr_reg[2:0], feedback};
 
